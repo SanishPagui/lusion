@@ -18,9 +18,6 @@ const page = () => {
     <div className='w-full h-full bg-[#F0F1FA]'>
       <Navbar/>
       <Hero/>
-      <div className='w-full h-full bg-black '>
-
-      </div>
     </div>
   )
 }
