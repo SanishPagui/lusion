@@ -21,7 +21,7 @@ const shuffle=(accent=0)=>[
 
 const Hero = () => {
   return (
-    <div className='w-full h-screen border-t-2'>
+    <div className='w-full h-svh border-t-2'>
         <div className='mt-8 text-[6.4vw] p-4 leading-none'>
           <div>
           We help brands create digital
@@ -59,7 +59,7 @@ function Scene(props){
   const modelRef = useRef()
   useEffect(() => {
     const handleOrientation = (event) => {
-      const { alpha=0, beta=0, gamma=0 } = event
+      const { alpha, beta, gamma } = event
       if (modelRef.current) {
         modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha)
         modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta)
