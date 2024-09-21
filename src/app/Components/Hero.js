@@ -59,11 +59,11 @@ function Scene(props){
   const modelRef = useRef()
   useEffect(() => {
     const handleOrientation = (event) => {
-      const { alpha, beta, gamma } = event
+      const { alpha=0, beta=0, gamma=0 } = event
       if (modelRef.current) {
-        modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha || 0)
-        modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta || 0)
-        modelRef.current.rotation.z = THREE.MathUtils.degToRad(gamma || 0)
+        modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha)
+        modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta)
+        modelRef.current.rotation.z = THREE.MathUtils.degToRad(gamma)
       }
     }
     window.addEventListener('deviceorientation', handleOrientation)
