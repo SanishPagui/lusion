@@ -22,7 +22,7 @@ const shuffle=(accent=0)=>[
 const Hero = () => {
   return (
     <div className='w-full h-screen border-t-2'>
-        <div className='mt-8 text-[1.65rem] p-4 leading-7'>
+        <div className='mt-8 text-[1.6rem] p-4 leading-7'>
           <div>
           We help brands create digital
           </div>  

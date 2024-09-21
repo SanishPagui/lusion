@@ -15,7 +15,7 @@ const page = () => {
   })
 
   return (
-    <div className='w-full h-full bg-[#F0F1FA]'>
+    <div className='w-full h-svh bg-[#F0F1FA]'>
       <Navbar/>
       <Hero/>
     </div>
