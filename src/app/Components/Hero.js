@@ -23,19 +23,13 @@ const Hero = () => {
   return (
     <div className='w-full h-screen border-t-2'>
         <div className='mt-8 text-[1.6rem] p-4 leading-7'>
-          <div>
-          We help brands create digital
-          </div>  
-          <div>
+          We help brands create digital  
           experiences that connect
-          </div>
-          <div>
           with their audiance
-          </div>
         </div>
         <div className='p-4 h-[73%]'>
-          <div className='w-full h-full'>
-            <Scene style={{borderRdius:20}}/>
+          <div className='w-full h-full '>
+            <Scene style={{borderRadius:10}}/>
           </div>
         </div>
         <div className='w-full h-fit flex justify-between items-center p-1 px-3'>
