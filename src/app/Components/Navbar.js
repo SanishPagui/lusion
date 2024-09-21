@@ -132,7 +132,10 @@ gsap.registerPlugin(MotionPathPlugin)
           <h1 className=' pr-28'>Subscribe to our newsletter</h1>
           <form className='flex items-center'>
             <input className='bg-[#F0F1FA] rounded-xl w-[95%] text-sm p-4 text-slate-300' type="text"  placeholder={"Your email"}></input>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M4.11 12.75a.75.75 0 0 1 0-1.5h13.978l-5.036-5.036a.75.75 0 1 1 1.06-1.06l6.316 6.315.53.53-.53.53-6.316 6.317a.75.75 0 0 1-1.06-1.061l5.035-5.035H4.109Z" clip-rule="evenodd"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path fill="#000" fillRule="evenodd" d="M4.11 12.75a.75.75 0 0 1 0-1.5h13.978l-5.036-5.036a.75.75 0 1 1 1.06-1.06l6.316 6.315.53.53-.53.53-6.316 6.317a.75.75 0 0 1-1.06-1.061l5.035-5.035H4.109Z" clip-rule="evenodd">
+            </path>
+            </svg>
           </form>
         </div>
         <div className='talking-div flex bg-white rounded-xl p-5 py-4'>
