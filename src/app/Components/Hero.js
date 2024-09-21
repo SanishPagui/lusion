@@ -57,7 +57,7 @@ function Scene(props){
   const [accent,click]=useReducer((state)=> ++state%accents.length,0 )
   const connectors=useMemo(()=>shuffle(accent),[accent])
   return(
-    <Canvas onClick={click} shadows dpr={[1,1.5]} gl={{antialias:true}} camera={{position:[0,0,70], fov:70 ,near:-40 ,far:-70}} {...props}>
+    <Canvas onClick={click} shadows dpr={[1,1.5]} gl={{antialias:true}} camera={{position:[0,0,15], fov:17.5 ,near:1 ,far:20}} {...props}>
       <color attach="background" args={['#141622']}/>
       <ambientLight intensity={0.4}/>
       <spotLight position={[10,10,10]} angle={0.15} penumbra={1} intensity={1} castShadow/>
