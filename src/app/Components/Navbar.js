@@ -120,8 +120,8 @@ gsap.registerPlugin(MotionPathPlugin)
           <div onClick={handleOnClick} className='dot2 w-[5px] h-[5px] bg-black rounded-full'></div>
         </div>
       </div>
-      <div onClick={toggleMenu} className={`fixed.bg-blue-700 fixed w-full h-screen transition-opacity duration-[1s] bg-[#0016EC] ease-in-out ${menu?' opacity-100':'opacity-0'}`}/>
-      <div className={`fixed w-full h-screen p-1 flex flex-col space-y-2 mt-16 px-3 transition-opacity duration-[.4s] ${menu?' opacity-100':'opacity-0'}`}>
+      <div onClick={toggleMenu} className={`fixed.bg-blue-700 fixed w-full h-screen transition-opacity duration-[1s] bg-[#0016EC] ease-in-out ${menu?' opacity-100':'opacity-0 hidden'}`}/>
+      <div className={`fixed w-full h-screen p-1 flex flex-col space-y-2 mt-16 px-3 transition-opacity duration-[.4s] ${menu?' opacity-100':'opacity-0 hidden'}`}>
         <div className={`content-div flex flex-col text-[1.3rem] bg-white rounded-xl p-5 space-y-2`}>
           <Link href={'#'}>HOME</Link>
           <Link href={'#'}>ABOUT US</Link>
