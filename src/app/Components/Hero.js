@@ -56,21 +56,6 @@ const Hero = () => {
 function Scene(props){
   const [accent,click]=useReducer((state)=> ++state%accents.length,0 )
   const connectors=useMemo(()=>shuffle(accent),[accent])
-  const modelRef = useRef()
-  useEffect(() => {
-    const handleOrientation = (event) => {
-      const { alpha, beta, gamma } = event
-      if (modelRef.current) {
-        modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha)
-        modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta)
-        modelRef.current.rotation.z = THREE.MathUtils.degToRad(gamma)
-      }
-    }
-    window.addEventListener('deviceorientation', handleOrientation)
-    return () => {
-      window.removeEventListener('deviceorientation', handleOrientation)
-    }
-  }, [])
   return(
     <Canvas onClick={click} shadows dpr={[1,1.5]} gl={{antialias:true}} camera={{position:[0,0,70], fov:70 ,near:-40 ,far:-70}} {...props}>
       <color attach="background" args={['#141622']}/>
