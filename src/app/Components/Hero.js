@@ -11,9 +11,9 @@ const shuffle=(accent=0)=>[
   {color:'#444',roughness:0.1},
   {color:'#444',roughness:0.75},
   {color:'#444',roughness:0.75},
-  {color:'#white',roughness:0.1},
-  {color:'#white',roughness:0.75},
-  {color:'#white',roughness:0.1},
+  {color:'#FFFFFF',roughness:0.1},
+  {color:'#FFFFFF',roughness:0.75},
+  {color:'#FFFFFF',roughness:0.1},
   {color:accents[accent],roughness:0.1,accent:true},
   {color:accents[accent],roughness:0.75,accent:true},
   {color:accents[accent],roughness:0.1,accent:true},
@@ -60,16 +60,13 @@ function Scene(props){
   useEffect(() => {
     const handleOrientation = (event) => {
       const { alpha, beta, gamma } = event
-
       if (modelRef.current) {
-        modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha || 0) // Yaw
-        modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta || 0) // Pitch
-        modelRef.current.rotation.z = THREE.MathUtils.degToRad(gamma || 0) // Roll
+        modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha || 0)
+        modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta || 0)
+        modelRef.current.rotation.z = THREE.MathUtils.degToRad(gamma || 0)
       }
     }
-
     window.addEventListener('deviceorientation', handleOrientation)
-
     return () => {
       window.removeEventListener('deviceorientation', handleOrientation)
     }

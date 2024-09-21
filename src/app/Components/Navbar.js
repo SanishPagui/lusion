@@ -133,7 +133,7 @@ gsap.registerPlugin(MotionPathPlugin)
           <form className='flex items-center'>
             <input className='bg-[#F0F1FA] rounded-xl w-[95%] text-sm p-4 text-slate-300' type="text"  placeholder={"Your email"}></input>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path fill="#000" fillRule="evenodd" d="M4.11 12.75a.75.75 0 0 1 0-1.5h13.978l-5.036-5.036a.75.75 0 1 1 1.06-1.06l6.316 6.315.53.53-.53.53-6.316 6.317a.75.75 0 0 1-1.06-1.061l5.035-5.035H4.109Z" clip-rule="evenodd">
+            <path fill="#000" d="M4.11 12.75a.75.75 0 0 1 0-1.5h13.978l-5.036-5.036a.75.75 0 1 1 1.06-1.06l6.316 6.315.53.53-.53.53-6.316 6.317a.75.75 0 0 1-1.06-1.061l5.035-5.035H4.109Z">
             </path>
             </svg>
           </form>
@@ -148,13 +148,13 @@ gsap.registerPlugin(MotionPathPlugin)
         </div>
         <div className='labs-div flex bg-black text-white rounded-xl p-5 py-4 items-enter'>
           <div className='basis-10'>
-          <svg id="header-menu-labs-lucy-svg"  className='w-8 h-8' xmlns="http://www.w3.org/2000/svg" width="28" height="38" fill="none" viewBox="0 0 28 38"><path stroke="#fff" stroke-width="5" d="M20.128 29.65C18.584 31.217 16.532 32 13.972 32c-2.56 0-4.612-.783-6.156-2.35C6.272 28.05 5.5 26 5.5 23.5c0-2.5.772-4.533 2.316-6.1 1.544-1.6 3.596-2.4 6.156-2.4 2.56 0 4.612.8 6.156 2.4C21.71 18.967 22.5 21 22.5 23.5c0 2.5-.79 4.55-2.372 6.15Z"></path><path fill="#fff" d="M23.5 4.25a3.25 3.25 0 1 0-6.5 0 3.25 3.25 0 0 0 6.5 0ZM11 4.25a3.25 3.25 0 1 0-6.5 0 3.25 3.25 0 0 0 6.5 0Z"></path></svg>
+          <svg id="header-menu-labs-lucy-svg"  className='w-8 h-8' xmlns="http://www.w3.org/2000/svg" width="28" height="38" fill="none" viewBox="0 0 28 38"><path stroke="#fff" strokeWidth="5" d="M20.128 29.65C18.584 31.217 16.532 32 13.972 32c-2.56 0-4.612-.783-6.156-2.35C6.272 28.05 5.5 26 5.5 23.5c0-2.5.772-4.533 2.316-6.1 1.544-1.6 3.596-2.4 6.156-2.4 2.56 0 4.612.8 6.156 2.4C21.71 18.967 22.5 21 22.5 23.5c0 2.5-.79 4.55-2.372 6.15Z"></path><path fill="#fff" d="M23.5 4.25a3.25 3.25 0 1 0-6.5 0 3.25 3.25 0 0 0 6.5 0ZM11 4.25a3.25 3.25 0 1 0-6.5 0 3.25 3.25 0 0 0 6.5 0Z"></path></svg>
           </div>
           <div className='text-[1.25rem] basis-60'>
             LABS
           </div>
           <div className=''>
-          <svg id="header-menu-labs-arrow" className='w-5 h-8' xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path></svg>
+          <svg id="header-menu-labs-arrow" className='w-5 h-8' xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path></svg>
           </div>
         </div>
       </div>
