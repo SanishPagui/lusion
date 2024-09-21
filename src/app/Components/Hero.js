@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { N8AO, EffectComposer} from '@react-three/postprocessing'
 import { BallCollider, CuboidCollider, Physics, RigidBody } from '@react-three/rapier'
 import { easing } from 'maath'
-import React, { useMemo, useReducer, useRef, useState } from 'react'
+import React, { useMemo, useReducer, useRef, useState, useEffect} from 'react'
 import * as THREE from 'three'
 
 const accents=['#4060ff','#20ffa0','#ff4060','#ffcc00']
@@ -22,17 +22,23 @@ const shuffle=(accent=0)=>[
 const Hero = () => {
   return (
     <div className='w-full h-screen border-t-2'>
-        <div className='mt-8 text-[1.6rem] p-4 leading-7'>
-          We help brands create digital  
+        <div className='mt-8 text-[6.4vw] p-4 leading-none'>
+          <div>
+          We help brands create digital
+          </div>  
+          <div>
           experiences that connect
+          </div>
+          <div>
           with their audiance
+          </div>
         </div>
-        <div className='p-4 h-[73%]'>
+        <div className='p-4 h-[73%] '>
           <div className='w-full h-full '>
             <Scene style={{borderRadius:10}}/>
           </div>
         </div>
-        <div className='w-full h-fit flex justify-between items-center p-1 px-3'>
+        <div className='w-full fixed h-fit flex bottom-0 top-auto justify-between items-center p-1 px-3'>
           <div className=' flex h-full'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
           </div>  
@@ -50,6 +56,24 @@ const Hero = () => {
 function Scene(props){
   const [accent,click]=useReducer((state)=> ++state%accents.length,0 )
   const connectors=useMemo(()=>shuffle(accent),[accent])
+  const modelRef = useRef()
+  useEffect(() => {
+    const handleOrientation = (event) => {
+      const { alpha, beta, gamma } = event
+
+      if (modelRef.current) {
+        modelRef.current.rotation.y = THREE.MathUtils.degToRad(alpha || 0) // Yaw
+        modelRef.current.rotation.x = THREE.MathUtils.degToRad(beta || 0) // Pitch
+        modelRef.current.rotation.z = THREE.MathUtils.degToRad(gamma || 0) // Roll
+      }
+    }
+
+    window.addEventListener('deviceorientation', handleOrientation)
+
+    return () => {
+      window.removeEventListener('deviceorientation', handleOrientation)
+    }
+  }, [])
   return(
     <Canvas onClick={click} shadows dpr={[1,1.5]} gl={{antialias:true}} camera={{position:[0,0,15], fov:17.5 ,near:1 ,far:20}} {...props}>
       <color attach="background" args={['#141622']}/>

@@ -5,8 +5,8 @@ import Navbar from './Components/Navbar'
 import Lenis from 'lenis'
 
 const page = () => {
-  const lenis = new Lenis()
   useEffect(()=>{
+    const lenis = new Lenis()
     function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
