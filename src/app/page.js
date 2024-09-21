@@ -4,12 +4,26 @@ import Hero from './Components/Hero'
 import Navbar from './Components/Navbar'
 import Lenis from 'lenis'
 
-const lenis = new Lenis()
-
-function raf(time) {
-  lenis.raf(time)
+useEffect(()=>{
+  const lenis=new Lenis({
+    
+    duration:2,
+    direction:'vertical',
+    smooth: true,
+    easing:(t)=>Math.min(1,1.001-Math.pow(2,-10*t)),
+    gestureDirection:'vertical',
+    smoothTouch:false,
+    scrub:10,
+  })
+  function raf(time){
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
   requestAnimationFrame(raf)
-}
+  return()=>{
+    lenis.destroy()
+  }
+})
 
 raf()
 
