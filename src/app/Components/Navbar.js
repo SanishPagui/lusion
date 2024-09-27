@@ -110,8 +110,8 @@ gsap.registerPlugin(MotionPathPlugin)
   }
     
   return (
-    <div className='fixed flex z-[999] h-[8%] w-full justify-between font-semibold'>
-      <div onClick={toggleMenu} className={`text-xl font-semibold p-4 z-[999] transition-colors duration-[2s] ${menu?"text-white":"text-black"}`}>
+    <div className='fixed flex z-[999] h-[8%] w-full justify-between font-semibold md:items-center md:px-8 md:h-[11%] '>
+      <div onClick={toggleMenu} className={`text-2xl font-semibold p-4 z-[999] transition-colors md:text-4xl duration-[2s] ${menu?"text-white":"text-black"}`}>
         LUSION
       </div>
       <div className='p-4 z-[999]'>

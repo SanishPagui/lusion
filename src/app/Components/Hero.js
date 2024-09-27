@@ -22,23 +22,15 @@ const shuffle=(accent=0)=>[
 const Hero = () => {
   return (
     <div className='w-full h-svh border-t-2'>
-        <div className='mt-8 text-[6.4vw] p-4 leading-none'>
-          <div>
-          We help brands create digital
-          </div>  
-          <div>
-          experiences that connect
-          </div>
-          <div>
-          with their audiance
-          </div>
+        <div className='mt-8 text-[6.4vw] p-4 leading-none md:flex md:mt-6 md:flex-col md:text-[2.6vw] md:justify-center md:items-center md:pr-[30vw] md:pl-[30vw] md:leading-[3vw]'>
+          We help brands create digital experiences that connect with their audiance
         </div>
-        <div className='p-4 h-[73%] '>
+        <div className='p-4 h-[73%] md:px-8 md:h-[85%] flex md:pr-[4vw] md:pl-[4vw]'>
           <div className='w-full h-full '>
             <Scene style={{borderRadius:10}}/>
           </div>
         </div>
-        <div className='w-full fixed h-fit flex bottom-0 top-auto justify-between items-center p-1 px-3'>
+        <div className='w-full absolute h-fit flex bottom-0 top-auto justify-between items-center p-1 px-3 md:px-6'>
           <div className=' flex h-full'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
           </div>  
